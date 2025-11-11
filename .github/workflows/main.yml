@@ -15,3 +15,9 @@ jobs:
 
       - name: Probar codigo
         run: python3 main.py
+
+      - name: Crear imagen docker
+        run: docker build -t naia/holamundo
+
+      - name: Probar contenedor docker
+        run: docker run naia/holamundo
